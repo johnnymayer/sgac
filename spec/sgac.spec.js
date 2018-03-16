@@ -7,6 +7,7 @@ describe('Sgac', function() {
     testAge = new Sgac('01/03/1986')
   })
 
+
   it('should get user age in seconds', function(){
     expect(testAge.age).toBeGreaterThan(1016111661)
   })
@@ -33,7 +34,6 @@ describe('Sgac', function() {
 
   it('should return life left to live', function() {
     let userLifeLeft = testAge.lifeLeft()
-    console.log(userLifeLeft)
     expect(userLifeLeft).toBe(testAge.lifeExpectancy)
   })
 })
