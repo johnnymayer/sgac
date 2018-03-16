@@ -1,4 +1,4 @@
-export class Age {
+export class Sgac {
 
   constructor(birthday){
     this.birthday = birthday
@@ -6,7 +6,11 @@ export class Age {
     this.today = new Date().getTime()
     this.age = Math.floor((this.today - this.convertDate)) / 1000
     this.year = ((this.age/31540000))
-    this.lifeLeft = 79 - this.year
+    this.lifeExpectancy = 79 - this.year
+    this.ageExpMercury = this.lifeExpectancy / .24
+    this.ageExpVenus = this.lifeExpectancy / .62
+    this.ageExpMars = this.lifeExpectancy / 1.88
+    this.ageExpJupiter = this.lifeExpectancy / 11.88
   }
 
   convertAgeToSeconds() {
@@ -27,5 +31,9 @@ export class Age {
 
   jupiterAge(){
     return(this.year / 11.88)
+  }
+
+  lifeLeft() {
+    return(this.lifeExpectancy)
   }
 }
