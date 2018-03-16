@@ -1,17 +1,19 @@
-export class Sgac {
+export class Age {
 
-  constructor(name, birthday){
-    this.name = name
+  constructor(birthday){
     this.birthday = birthday
-    this.modBirthday = new Date()
+    this.convertDate = new Date(this.birthday).getTime()
+    this.today = new Date().getTime()
+    this.age = Math.floor((this.today - this.convertDate)) / 1000
+    this.year = ((this.age/31540000))
+  }
+
+  convertAgeToSeconds() {
+    this.modBirthday = Date.parse(this.birthday) / 1000
   }
 
   ageMod() {
-    this.modBirthday = Date.parse(this.birthday) / 1000
     let today = Math.floor(Date.now() / 1000)
-    console.log(today)
     return (today - this.modBirthday)
   }
-
-
 }
