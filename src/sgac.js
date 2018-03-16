@@ -2,9 +2,10 @@ export class Age {
 
   constructor(birthday){
     this.birthday = birthday
-    this.convertDate = new Date(this.birthday).getFullYear()
-    this.year = new Date().getFullYear()
-    this.age = Math.floor((this.year - this.convertDate))
+    this.convertDate = new Date(this.birthday).getTime()
+    this.today = new Date().getTime()
+    this.age = Math.floor((this.today - this.convertDate)) / 1000
+    this.year = ((this.age/31540000))
     this.lifeLeft = 79 - this.year
   }
 
@@ -13,20 +14,18 @@ export class Age {
   }
 
   mercuryAge() {
-    return(this.age / .24)
+    return(this.year / .24)
   }
 
   venusAge() {
-    return(this.age / .62)
+    return(this.year / .62)
   }
 
   marsAge() {
-    return(this.age / 1.88)
+    return(this.year / 1.88)
   }
 
   jupiterAge(){
-    return(this.age / 11.88)
+    return(this.year / 11.88)
   }
-
-
 }

@@ -8,28 +8,26 @@ describe('Age', function(){
   })
 
   it('should get user age in seconds', function(){
-    console.log(testAge.age);
-    expect(testAge.age).toBeGreaterThanOrEqualTo(32)
+    expect(testAge.year).toBeGreaterThanOrEqualTo(32)
   })
 
   it('should return user age on planet Mercury', function(){
     let userMercuryAge = testAge.mercuryAge()
-    console.log('Merc age: ' + userMercuryAge);
-    expect(userMercuryAge).toBe((testAge.age / .24))
+    expect(userMercuryAge).toBe((testAge.year / .24))
   })
 
   it('should return user age on planet Venus', function (){
     let userVenusAge = testAge.venusAge()
-    expect(userVenusAge).toBe((testAge.age / .62))
+    expect(userVenusAge).toBe((testAge.year / .62))
   })
 
   it('should return user age on Mars', function(){
     let userMarsAge = testAge.marsAge()
-    expect(userMarsAge).toBe((testAge.age / 1.88))
+    expect(userMarsAge).toBe((testAge.year / 1.88))
   })
 
   it('should return user age on Jupiter', function(){
     let userJupiterAge = testAge.jupiterAge()
-    expect(userJupiterAge).toBe((testAge.age / 11.88))
+    expect(userJupiterAge).toBe((testAge.year / 11.88))
   })
 })
