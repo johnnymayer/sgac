@@ -1,14 +1,14 @@
 import { Sgac } from '../src/sgac'
 
 describe('Sgac', () => {
-  let testAge;
-  let testAgeOver;
+  let testAge
+  let testAgeOver
 
-  beforeEach(function() {
+  beforeEach(function () {
     testAge = new Sgac('01/03/1986')
   })
 
-  beforeEach(function(){
+  beforeEach(function () {
     testAgeOver = new Sgac('01/03/1886')
   })
 
@@ -18,12 +18,12 @@ describe('Sgac', () => {
 
   it('should return user age on planet Mercury', () => {
     let userMercuryAge = testAge.mercuryAge()
-    expect(userMercuryAge).toBe((testAge.year / .24))
+    expect(userMercuryAge).toBe((testAge.year / 0.24))
   })
 
   it('should return user age on planet Venus', () => {
     let userVenusAge = testAge.venusAge()
-    expect(userVenusAge).toBe((testAge.year / .62))
+    expect(userVenusAge).toBe((testAge.year / 0.62))
   })
 
   it('should return user age on Mars', () => {
@@ -54,7 +54,7 @@ describe('Sgac', () => {
   it('should return user years left to live on Mars', () => {
     let userLifeLeftMars = testAge.marsAgeLeft()
     expect(userLifeLeftMars).toBe(testAge.ageExpMars)
-      })
+  })
   it('should return user years left to live on Jupiter', () => {
     let userLifeLeftJupiter = testAge.jupiterAgeLeft()
     expect(userLifeLeftJupiter).toBe(testAge.ageExpJupiter)
