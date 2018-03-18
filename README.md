@@ -23,3 +23,18 @@
   * Output: 2
 
 * Determine how many years a user has left to live, or how many years they have outlived on each planet for Earth, Mercury, Venus, Mars, and Jupiter.  According to Google, the average life expectancy of a human is 79 years on Earth.
+  * Earth life left to live:
+    * Input: 32
+    * Output: 47
+  * Mercury life left to live:
+    * Input: 133
+    * Output: 195
+  * Venus life left to live:
+    * Input: 51
+    * Output: 75
+  * Mars life left to live:
+    * Input: 17
+    * Output: 25
+  * Jupiter life left to live:
+    * Input: 2
+    * Output: 4
